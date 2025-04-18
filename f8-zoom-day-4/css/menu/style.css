@@ -48,3 +48,11 @@ body {
   font-size: 16px;
   text-decoration: none;
 }
+
+.active {
+  background-color: white;
+}
+
+.active > a {
+  color: #3f5cca !important;
+}

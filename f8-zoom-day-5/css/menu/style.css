@@ -1,0 +1,99 @@
+/* Global Styles */
+:root {
+  --primary-color: #3f5cca;
+  --background-color: white;
+  --font-color: white;
+  --hover-color: #3f5cca;
+  --active-color: #3f5cca;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* --font-weight: 500; */
+  --line-height: 76px;
+  --padding-horizontal: 20px;
+  --container-padding: 58px;
+  --container-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #ccc;
+}
+
+.container {
+  margin-top: 8px;
+  padding: 0 var(--container-padding);
+  height: var(--container-height);
+}
+
+.menu {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu ul li {
+  height: var(--line-height);
+  line-height: var(--line-height);
+  flex: 1;
+  text-align: center;
+  border-right: 0.1px dashed var(--background-color);
+}
+
+.menu ul li:last-child {
+  border-right: none;
+}
+
+.menu ul li::before {
+  content: "\25B6";
+  color: var(--background-color);
+  margin-right: 5px;
+}
+
+.menu ul li:hover {
+  background-color: var(--background-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu ul li:hover a {
+  color: var(--hover-color);
+}
+
+.menu ul li a {
+  color: var(--font-color);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  text-decoration: none;
+}
+
+.menu .active {
+  font-weight: 600;
+  background-color: var(--background-color);
+}
+
+.menu .active a {
+  color: var(--active-color) !important;
+}
+
+.menu ul li.active::before {
+  content: "\25B6";
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+
+.menu ul li:hover::before {
+  content: "\25B6";
+  color: var(--primary-color);
+  margin-right: 5px;
+}
